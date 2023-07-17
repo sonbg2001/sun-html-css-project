@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
   --main-color: #c01111;
   --background-color: #4d5969;
@@ -6,6 +13,7 @@
 }
 /* Reset CSS */
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -33,13 +41,20 @@ a {
   z-index: 9;
   height: var(--header-height);
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: fixed;
   right: 0;
   left: 0;
   top: 0;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -48,9 +63,14 @@ a {
 }
 
 .header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: auto;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   background-color: #fff;
 }
@@ -72,12 +92,18 @@ a {
   height: 6px;
   top: -30px;
   display: block;
+
   border-radius: 5px;
+  -webkit-border-radius: 5px;
   background-color: #c01111;
   width: 60%;
   left: 50%;
+  -webkit-transition: opacity 0.3s ease, top 0.3s ease;
+  -o-transition: opacity 0.3s ease, top 0.3s ease;
   transition: opacity 0.3s ease, top 0.3s ease;
   position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .header__nav-list-item--link.active,
@@ -107,7 +133,9 @@ a {
   padding: 8px;
   font-size: 22px;
   border: 0 solid;
+
   border-radius: 3px;
+
   background-color: rgba(0, 0, 0, 0.05);
   color: #494c4f;
 }
@@ -128,6 +156,7 @@ a {
   color: #c01111;
   font-weight: 600;
   border: 1px solid #c01111;
+
   border-radius: 4px;
   padding: 1px 13px;
 }
@@ -174,6 +203,7 @@ a {
   height: auto;
   max-width: 100%;
   border: none;
+
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -181,16 +211,23 @@ a {
 
 .haru-intro {
   border: 6px solid #f9f9f9;
+
   border-radius: 16px;
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .haru-intro::before {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   content: "";
   border: 6px solid #f9f9f9;
+
   border-radius: 16px;
   position: absolute;
   width: 110px;
@@ -198,6 +235,7 @@ a {
   left: 0;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: -1;
 }
@@ -208,6 +246,7 @@ a {
 
 .haru-business__item {
   border: 1px solid #d7dadc;
+
   border-radius: 16px;
   padding: 48px;
   background-color: #fff;
@@ -223,12 +262,14 @@ a {
   content: "";
   width: 66px;
   height: 66px;
+
   border-radius: 50%;
   background-color: #d82329;
   position: absolute;
   right: 50px;
   top: 0;
   -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -251,10 +292,12 @@ a {
   width: 38px;
   height: 38px;
   background-color: #f3f3f3;
+
   border-radius: 50%;
   left: 0;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: -1;
 }
@@ -285,13 +328,21 @@ a {
 }
 
 .haru-business__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .haru-button {
   text-align: center;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
   z-index: 1;
@@ -304,6 +355,8 @@ a {
 .haru-button--bg-white {
   background-color: #fff;
   color: #c01111;
+  -webkit-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
 }
 
@@ -356,9 +409,18 @@ a {
 }
 
 .haru-counter__description {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -382,12 +444,14 @@ a {
   left: 0;
   background-color: rgba(192, 17, 17, 0.9);
   z-index: 0;
+
   border-radius: 16px;
 }
 
 .haru-career-intro__content {
   position: relative;
   color: #fff;
+
   border-radius: 16px;
   padding: 0 5%;
   background-size: cover;
@@ -439,6 +503,7 @@ a {
   height: auto;
   max-width: 100%;
   border: none;
+
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -465,10 +530,14 @@ a {
   width: 38px;
   height: 38px;
   background-color: #e4e4e4;
+
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+
   left: 0;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: -1;
 }
@@ -479,5 +548,7 @@ a {
 
 .footer-header__link a {
   color: #949ba4;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
